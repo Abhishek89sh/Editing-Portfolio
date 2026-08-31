@@ -1,0 +1,657 @@
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+
+  position: relative;
+
+  width: 100%;
+
+  padding: 160px 0 100px;
+
+  background: var(--color-bg);
+
+  color: var(--color-text);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   SUBTLE GLOW
+========================================= */
+
+.about-section::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -250px;
+  top: 100px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(200, 255, 0, 0.07),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.about-container {
+
+  width: min(
+    calc(100% - 40px),
+    var(--container-width)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.about-header {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 80px;
+
+  color: var(--color-text-muted);
+
+  font-size: 9px;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.about-number {
+
+  color: var(--color-accent);
+
+  font-family: monospace;
+}
+
+
+.about-label {
+
+  white-space: nowrap;
+}
+
+
+.about-line {
+
+  width: 100px;
+
+  height: 1px;
+
+  background: var(--color-border);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.about-main {
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 0.8fr);
+
+  gap: clamp(
+    50px,
+    10vw,
+    160px
+  );
+
+  align-items: start;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.about-heading h2 {
+
+  margin: 0;
+
+  max-width: 700px;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    3.5rem,
+    7vw,
+    7rem
+  );
+
+  font-weight: 700;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.065em;
+
+  text-transform: uppercase;
+}
+
+
+.about-heading h2 span {
+
+  display: block;
+
+  color: var(--color-accent);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.about-content {
+
+  padding-top: 10px;
+
+  max-width: 500px;
+}
+
+
+.about-intro {
+
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: 18px;
+
+  line-height: 1.6;
+
+  letter-spacing: -0.02em;
+}
+
+
+.about-text {
+
+  margin-top: 25px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   EXPERIENCE CARD
+========================================= */
+
+.experience-card {
+
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 45px 1fr auto;
+
+  gap: 20px;
+
+  align-items: start;
+
+  margin-top: 45px;
+
+  padding: 25px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  background: var(--color-surface);
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.experience-card:hover {
+
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(200, 255, 0, 0.35);
+
+  background:
+    rgba(200, 255, 0, 0.035);
+}
+
+
+.experience-number {
+
+  color: var(--color-accent);
+
+  font-family: monospace;
+
+  font-size: 11px;
+}
+
+
+.experience-info {
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.experience-label {
+
+  color: var(--color-text-muted);
+
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+}
+
+
+.experience-info h3 {
+
+  margin: 8px 0 5px;
+
+  font-family: var(--font-heading);
+
+  font-size: 32px;
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+
+.experience-info p {
+
+  margin: 0;
+
+  max-width: 280px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+
+.experience-arrow {
+
+  color: var(--color-accent);
+
+  font-size: 20px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.experience-card:hover .experience-arrow {
+
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.about-skills {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 25px;
+}
+
+
+.about-skills span {
+
+  padding: 9px 12px;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 999px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 8px;
+
+  letter-spacing: 0.08em;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.about-skills span:hover {
+
+  color: var(--color-accent);
+
+  border-color:
+    rgba(200, 255, 0, 0.35);
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.about-stats {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  margin-top: 120px;
+
+  border-top: 1px solid var(--color-border);
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+.about-stat {
+
+  min-height: 130px;
+
+  padding: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  border-right: 1px solid var(--color-border);
+}
+
+
+.about-stat:first-child {
+
+  padding-left: 0;
+}
+
+
+.about-stat strong {
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    2rem,
+    3vw,
+    3.5rem
+  );
+
+  line-height: 1;
+
+  letter-spacing: -0.05em;
+}
+
+
+.about-stat span {
+
+  color: var(--color-text-muted);
+
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+
+  line-height: 1.5;
+}
+
+
+.about-stat-last {
+
+  position: relative;
+
+  flex-direction: row;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  border-right: none;
+}
+
+
+.stat-arrow {
+
+  color: var(--color-accent);
+
+  font-size: 22px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .about-section {
+
+    padding: 120px 0 80px;
+  }
+
+
+  .about-main {
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+
+  .about-heading h2 {
+
+    max-width: 600px;
+  }
+
+
+  .about-content {
+
+    max-width: 600px;
+
+    justify-self: end;
+  }
+
+
+  .about-stats {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .about-stat:nth-child(2) {
+
+    border-right: none;
+  }
+
+
+  .about-stat:nth-child(3),
+  .about-stat:nth-child(4) {
+
+    border-top: 1px solid var(--color-border);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .about-section {
+
+    padding: 100px 0 60px;
+  }
+
+
+  .about-container {
+
+    width: calc(100% - 30px);
+  }
+
+
+  .about-header {
+
+    margin-bottom: 55px;
+  }
+
+
+  .about-line {
+
+    width: 50px;
+  }
+
+
+  .about-main {
+
+    gap: 45px;
+  }
+
+
+  .about-heading h2 {
+
+    font-size: clamp(
+      3.2rem,
+      15vw,
+      5rem
+    );
+
+    line-height: 0.88;
+  }
+
+
+  .about-content {
+
+    padding-top: 0;
+  }
+
+
+  .about-intro {
+
+    font-size: 16px;
+
+    line-height: 1.55;
+  }
+
+
+  .about-text {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  .experience-card {
+
+    grid-template-columns:
+      30px 1fr auto;
+
+    gap: 12px;
+
+    padding: 18px;
+  }
+
+
+  .experience-info h3 {
+
+    font-size: 27px;
+  }
+
+
+  .experience-info p {
+
+    font-size: 10px;
+  }
+
+
+  .about-skills {
+
+    gap: 5px;
+  }
+
+
+  .about-skills span {
+
+    padding: 8px 10px;
+
+    font-size: 7px;
+  }
+
+
+  .about-stats {
+
+    margin-top: 75px;
+  }
+
+
+  .about-stat {
+
+    min-height: 100px;
+
+    padding: 18px 12px;
+  }
+
+
+  .about-stat:first-child {
+
+    padding-left: 0;
+  }
+
+
+  .about-stat strong {
+
+    font-size: 28px;
+  }
+
+
+  .about-stat span {
+
+    font-size: 7px;
+  }
+
+}

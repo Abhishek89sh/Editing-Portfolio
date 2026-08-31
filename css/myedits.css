@@ -1,0 +1,1044 @@
+/* =========================================
+   MY EDITS
+========================================= */
+
+.edits-section {
+
+  position: relative;
+
+  width: 100%;
+
+  padding: 150px 0 110px;
+
+  background: var(--color-bg);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.edits-container {
+
+  width: min(
+    calc(100% - 40px),
+    var(--container-width)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.edits-header {
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 55px;
+}
+
+
+.edits-heading {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: var(--color-text-muted);
+
+  font-size: 9px;
+
+  letter-spacing: .16em;
+}
+
+
+.edits-number {
+
+  color: var(--color-accent);
+
+  font-family: monospace;
+}
+
+
+.edits-intro {
+
+  width: 300px;
+
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+
+  text-align: right;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.edits-title {
+
+  margin-bottom: 90px;
+}
+
+
+.edits-title h2 {
+
+  margin: 0;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    4.5rem,
+    10vw,
+    10rem
+  );
+
+  font-weight: 700;
+
+  line-height: .75;
+
+  letter-spacing: -.075em;
+
+  text-transform: uppercase;
+}
+
+
+.edits-title h2 span {
+
+  color: var(--color-accent);
+}
+
+
+/* =========================================
+   CATEGORY SECTION
+========================================= */
+
+.edit-category-section {
+
+  width: 100%;
+
+  margin-bottom: 120px;
+}
+
+
+/* =========================================
+   CATEGORY HEADING
+========================================= */
+
+.category-heading {
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+
+  margin-bottom: 25px;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+.category-heading > div:first-child {
+
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 15px;
+}
+
+
+.category-number {
+
+  color: var(--color-accent);
+
+  font-family: monospace;
+
+  font-size: 9px;
+
+  letter-spacing: .08em;
+}
+
+
+.category-heading h3 {
+
+  margin: 0;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    2rem,
+    4vw,
+    4rem
+  );
+
+  font-weight: 600;
+
+  line-height: .9;
+
+  letter-spacing: -.06em;
+
+  text-transform: uppercase;
+}
+
+
+.category-heading h3 span {
+
+  color: var(--color-accent);
+}
+
+
+/* =========================================
+   CATEGORY META
+========================================= */
+
+.category-meta {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  color: var(--color-text-muted);
+
+  font-size: 8px;
+
+  letter-spacing: .12em;
+}
+
+
+.scroll-hint {
+
+  color: var(--color-accent);
+}
+
+
+/* =========================================
+   SHORT FORM HORIZONTAL SCROLL
+========================================= */
+
+.short-edits-wrapper {
+
+  width: 100%;
+
+  overflow-x: auto;
+
+  overflow-y: hidden;
+
+  padding-bottom: 15px;
+
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    var(--color-border)
+    transparent;
+
+  cursor: grab;
+
+  overscroll-behavior-x: contain;
+}
+
+
+.short-edits-wrapper:active {
+
+  cursor: grabbing;
+}
+
+
+.short-edits-wrapper::-webkit-scrollbar {
+
+  height: 4px;
+}
+
+
+.short-edits-wrapper::-webkit-scrollbar-track {
+
+  background: transparent;
+}
+
+
+.short-edits-wrapper::-webkit-scrollbar-thumb {
+
+  background: var(--color-border);
+
+  border-radius: 20px;
+}
+
+
+/* =========================================
+   SHORT EDITS ROW
+========================================= */
+
+.short-edits {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  width: max-content;
+}
+
+
+/* =========================================
+   SHORT VIDEO CARD
+========================================= */
+
+.short-edit-card {
+
+  position: relative;
+
+  flex: 0 0 auto;
+
+  /*
+    Default width.
+    JS adjusts this according to
+    the video's actual aspect ratio.
+  */
+
+  width: 250px;
+}
+
+
+/* =========================================
+   SHORT MEDIA
+========================================= */
+
+.short-edit-media {
+
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  background: #080808;
+
+  box-shadow:
+    0 15px 50px rgba(0,0,0,.18);
+}
+
+
+/*
+   IMPORTANT
+
+   Video is NOT forced into 16:9.
+   JS sets the actual aspect ratio.
+*/
+
+.short-edit-media video {
+
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  aspect-ratio: auto;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  background: #080808;
+
+  vertical-align: middle;
+
+  transform: none;
+
+  transition: none;
+}
+
+
+/* =========================================
+   SHORT CARD OVERLAY
+========================================= */
+
+.short-edit-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.35),
+      transparent 35%,
+      rgba(0,0,0,.65)
+    );
+}
+
+
+/* =========================================
+   VIDEO NUMBER
+========================================= */
+
+.edit-video-number {
+
+  position: absolute;
+
+  top: 15px;
+
+  left: 15px;
+
+  color: rgba(255,255,255,.75);
+
+  font-family: monospace;
+
+  font-size: 8px;
+
+  letter-spacing: .08em;
+}
+
+
+/* =========================================
+   VIDEO TYPE
+========================================= */
+
+.edit-video-type {
+
+  position: absolute;
+
+  top: 15px;
+
+  right: 15px;
+
+  color: rgba(255,255,255,.75);
+
+  font-size: 8px;
+
+  letter-spacing: .12em;
+}
+
+
+/* =========================================
+   PLAY BUTTON
+========================================= */
+
+.video-play-button {
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transform:
+    translate(-50%, -50%);
+
+  border: 1px solid
+    rgba(255,255,255,.45);
+
+  border-radius: 50%;
+
+  background:
+    rgba(0,0,0,.35);
+
+  backdrop-filter: blur(12px);
+
+  color: #fff;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition:
+    background .3s ease,
+    border-color .3s ease,
+    transform .3s ease,
+    opacity .3s ease;
+
+  z-index: 5;
+}
+
+
+.video-play-button:hover {
+
+  background: var(--color-accent);
+
+  border-color: var(--color-accent);
+
+  color: #080808;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1.08);
+}
+
+
+/*
+   When video is playing,
+   make play button slightly subtle.
+*/
+
+.video-playing .video-play-button {
+
+  opacity: .25;
+}
+
+
+.short-edit-card:hover
+.video-playing
+.video-play-button {
+
+  opacity: 1;
+}
+
+
+/* =========================================
+   SHORT INFO
+========================================= */
+
+.short-edit-info {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding-top: 13px;
+}
+
+
+.short-edit-info > div {
+
+  min-width: 0;
+}
+
+
+.short-edit-category {
+
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--color-text-muted);
+
+  font-size: 7px;
+
+  letter-spacing: .13em;
+}
+
+
+.short-edit-title {
+
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-family: var(--font-heading);
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -.035em;
+}
+
+
+.short-edit-arrow {
+
+  flex-shrink: 0;
+
+  color: var(--color-accent);
+
+  font-size: 19px;
+
+  transition:
+    transform .3s ease;
+}
+
+
+.short-edit-card:hover
+.short-edit-arrow {
+
+  transform:
+    translate(4px, -4px);
+}
+
+
+/* =========================================
+   LONG FORM
+========================================= */
+
+.long-edits {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: start;
+
+  gap: 55px 20px;
+}
+
+
+/* =========================================
+   LONG CARD
+========================================= */
+
+.long-edit-card {
+
+  min-width: 0;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   LONG MEDIA
+========================================= */
+
+.long-edit-media {
+
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-lg);
+
+  background: #080808;
+}
+
+
+/*
+   Video itself controls the height.
+*/
+
+.long-edit-media video {
+
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+
+  object-position: center;
+
+  background: #080808;
+
+  vertical-align: middle;
+
+  transform: none;
+
+  transition: none;
+}
+
+
+/* =========================================
+   LONG OVERLAY
+========================================= */
+
+.long-edit-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.35),
+      transparent 35%,
+      rgba(0,0,0,.7)
+    );
+}
+
+
+/* =========================================
+   LONG INFO
+========================================= */
+
+.long-edit-info {
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  padding-top: 15px;
+}
+
+
+.long-edit-info > div {
+
+  min-width: 0;
+}
+
+
+.long-edit-category {
+
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--color-text-muted);
+
+  font-size: 8px;
+
+  letter-spacing: .13em;
+}
+
+
+.long-edit-title {
+
+  margin: 0;
+
+  font-family: var(--font-heading);
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -.04em;
+}
+
+
+.long-edit-arrow {
+
+  color: var(--color-accent);
+
+  font-size: 22px;
+
+  transition:
+    transform .3s ease;
+}
+
+
+.long-edit-card:hover
+.long-edit-arrow {
+
+  transform:
+    translate(4px, -4px);
+}
+
+
+/* =========================================
+   EMPTY / ERROR
+========================================= */
+
+.edits-error,
+.no-edits {
+
+  width: 100%;
+
+  padding: 50px 20px;
+
+  border: 1px solid var(--color-border);
+
+  color: var(--color-text-muted);
+
+  text-align: center;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   BOTTOM CTA
+========================================= */
+
+.edits-bottom {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 30px;
+
+  border-top: 1px solid var(--color-border);
+}
+
+
+.edits-bottom p {
+
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 9px;
+
+  letter-spacing: .12em;
+}
+
+
+.edits-bottom a {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  color: var(--color-text);
+
+  text-decoration: none;
+
+  font-family: var(--font-heading);
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  letter-spacing: -.02em;
+
+  transition:
+    color .3s ease;
+}
+
+
+.edits-bottom a span {
+
+  color: var(--color-accent);
+
+  transition:
+    transform .3s ease;
+}
+
+
+.edits-bottom a:hover {
+
+  color: var(--color-accent);
+}
+
+
+.edits-bottom a:hover span {
+
+  transform:
+    translate(4px, -4px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .edits-section {
+
+    padding: 120px 0 90px;
+  }
+
+
+  .long-edits {
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .long-edit-card {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .edits-section {
+
+    padding: 100px 0 70px;
+  }
+
+
+  .edits-container {
+
+    width: calc(100% - 30px);
+  }
+
+
+  .edits-header {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+  }
+
+
+  .edits-intro {
+
+    width: 100%;
+
+    max-width: 300px;
+
+    text-align: left;
+  }
+
+
+  .edits-title {
+
+    margin-bottom: 70px;
+  }
+
+
+  .edits-title h2 {
+
+    font-size:
+      clamp(4rem, 18vw, 6rem);
+  }
+
+
+  .edit-category-section {
+
+    margin-bottom: 90px;
+  }
+
+
+  .category-heading {
+
+    align-items: flex-end;
+
+    margin-bottom: 20px;
+  }
+
+
+  .category-heading > div:first-child {
+
+    gap: 10px;
+  }
+
+
+  .category-heading h3 {
+
+    font-size: 2rem;
+  }
+
+
+  .category-meta {
+
+    gap: 0;
+  }
+
+
+  .scroll-hint {
+
+    display: none;
+  }
+
+
+  /*
+    Slightly smaller short videos
+    on mobile.
+  */
+
+  .short-edit-card {
+
+    width: 205px;
+  }
+
+
+  .short-edits {
+
+    gap: 13px;
+  }
+
+
+  .short-edit-title {
+
+    font-size: 15px;
+  }
+
+
+  .long-edits {
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+
+  .long-edit-title {
+
+    font-size: 19px;
+  }
+
+
+  .edits-bottom {
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+
+  .edits-bottom a {
+
+    font-size: 13px;
+  }
+
+}

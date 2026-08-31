@@ -1,0 +1,22 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "title": "Alto Edit, 200k+ Views",
+      "type": "reel",
+      "src": "assets/videos/maw-edit1.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Sample Edit",
+      "type": "Sample",
+      "src": "assets/videos/sample.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Biology Edit",
+      "type": "reel",
+      "src": "assets/videos/edit1.mp4"
+    }
+  ]
+}

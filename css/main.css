@@ -1,0 +1,340 @@
+:root {
+  /* ================================
+     COLORS
+  ================================= */
+
+  /* Backgrounds */
+  --color-bg: #080808;
+  --color-bg-secondary: #101010;
+  --color-surface: #151515;
+  --color-surface-hover: #1b1b1b;
+
+  /* Text */
+  --color-text: #f5f5f5;
+  --color-text-secondary: #9a9a9a;
+  --color-text-muted: #666666;
+
+  /* Accent */
+  --color-accent: #c8ff00;
+  --color-accent-hover: #d7ff4a;
+  --color-accent-dark: #9ec700;
+
+  /* Borders */
+  --color-border: #262626;
+  --color-border-light: #333333;
+
+  /* ================================
+     TYPOGRAPHY
+  ================================= */
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 3rem;
+  --text-4xl: 4rem;
+  --text-5xl: 5rem;
+  --text-hero: clamp(4rem, 10vw, 10rem);
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ================================
+     SPACING
+  ================================= */
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Section spacing */
+  --section-padding: clamp(5rem, 10vw, 10rem);
+
+  /* ================================
+     CONTAINER
+  ================================= */
+
+  --container-width: 1400px;
+  --container-padding: clamp(1.25rem, 4vw, 4rem);
+
+  /* ================================
+     BORDER RADIUS
+  ================================= */
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  /* ================================
+     SHADOWS
+  ================================= */
+
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 10px 40px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 20px 80px rgba(0, 0, 0, 0.5);
+
+  /* ================================
+     TRANSITIONS
+  ================================= */
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.4s ease;
+  --transition-slow: 0.7s ease;
+
+  /* ================================
+     Z-INDEX
+  ================================= */
+
+  --z-base: 1;
+  --z-content: 10;
+  --z-header: 100;
+  --z-overlay: 500;
+  --z-modal: 1000;
+}
+
+
+/* =================================
+   GLOBAL RESET
+================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =================================
+   COMMON UTILITIES
+================================= */
+
+.container {
+  width: min(100% - (var(--container-padding) * 2), var(--container-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-padding);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-muted {
+  color: var(--color-text-secondary);
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+
+/* =================================
+   BUTTONS
+================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+
+  padding: 0.9rem 1.5rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #080808;
+  border-color: var(--color-accent);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text);
+}
+
+.btn-secondary:hover {
+  background: var(--color-surface);
+  border-color: var(--color-border-light);
+}
+
+
+/* =================================
+   CARDS
+================================= */
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition:
+    background var(--transition-normal),
+    border-color var(--transition-normal),
+    transform var(--transition-normal);
+}
+
+.card:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-light);
+  transform: translateY(-4px);
+}
+
+
+/* =================================
+   SELECTION
+================================= */
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+
+/* =================================
+   SCROLLBAR
+================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-light);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* =========================================
+   CURSOR GLOW
+========================================= */
+
+.cursor-glow {
+  position: fixed;
+
+  width: 420px;
+  height: 420px;
+
+  left: 0;
+  top: 0;
+
+  pointer-events: none;
+
+  z-index: 9999;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(200, 255, 0, 0.12) 0%,
+    rgba(200, 255, 0, 0.06) 25%,
+    rgba(200, 255, 0, 0.025) 45%,
+    transparent 70%
+  );
+
+  transform: translate(-50%, -50%);
+
+  filter: blur(10px);
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+
+  will-change: transform;
+}
+
+
+
+body.cursor-active .cursor-glow {
+  opacity: 1;
+}
+
+
+
+@media (hover: none), (pointer: coarse) {
+
+  .cursor-glow {
+    display: none;
+  }
+
+}

@@ -1,0 +1,16 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "title": "Capcut Editing Tutorial",
+      "type": "YT Video",
+      "src": "assets/videos/long1.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Sample Edit",
+      "type": "Sample",
+      "src": "assets/videos/longsample2.mp4"
+    }
+  ]
+}

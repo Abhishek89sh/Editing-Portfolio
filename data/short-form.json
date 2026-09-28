@@ -4,19 +4,51 @@
       "id": 1,
       "title": "Alto Edit, 200k+ Views",
       "type": "reel",
-      "src": "assets/videos/maw-edit1.mp4"
+      "src": "assets/videos/shorts/maw-edit1.mp4"
+    },
+    {
+      "id": 6,
+      "title": "BMW car sale",
+      "type": "reel",
+      "src": "assets/videos/shorts/nmb.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Vivid Interiors Concept - Real estate video",
+      "type": "reel",
+      "src": "assets/videos/shorts/vic1.mp4"
     },
     {
       "id": 2,
-      "title": "Sample Edit",
-      "type": "Sample",
-      "src": "assets/videos/sample.mp4"
+      "title": "Jelly Jolies",
+      "type": "reel",
+      "src": "assets/videos/shorts/jl1.mp4"
     },
     {
       "id": 3,
+      "title": "Pie cables",
+      "type": "reel",
+      "src": "assets/videos/shorts/pc1.mp4"
+    },
+    
+    {
+      "id": 5,
+      "title": "Clothing edit",
+      "type": "reel",
+      "src": "assets/videos/shorts/sb1.mp4"
+    },
+    
+    {
+      "id": 7,
+      "title": "Sample Edit",
+      "type": "Sample",
+      "src": "assets/videos/shorts/sample.mp4"
+    },
+    {
+      "id": 8,
       "title": "Biology Edit",
       "type": "reel",
-      "src": "assets/videos/edit1.mp4"
+      "src": "assets/videos/shorts/edit1.mp4"
     }
   ]
 }
